@@ -150,7 +150,7 @@ def getinfo(semester_data):
     if s in "yY":
         with open(COURSE_INFO_PATH, "w", encoding="utf8") as f:
             f.write(str(semester_data['p_xnxq']) + "\n")
-            f.write(dumps(_course_info))
+            f.write(dumps(_course_info, ensure_ascii=False))
     return _course_info
 
 
